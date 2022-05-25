@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(/Стаж-Таск/Fonts/Gilroy-Light.woff);
+}
+
+body {
+    display: flex;
+    gap: 10px;
+    background: url("Img/the-king-of-mandalorian-4k-wu.jpg") no-repeat;
+    background-size: 1850px 980px;
+}
+
+.all-lists {
+    display: flex;
+    gap: 10px;
+}
+
+.new-list {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-self: baseline;
+    width: 320px;
+}
+
+.head {
+    display: flex;
+    position: relative;
+    width: 320px;
+    min-height: 55px;
+    background: #27334F;
+    border-radius: 5px 5px 0 0;
+    padding-left: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.head-text {
+    width: 245px;
+    min-height: 35px;
+    height: auto;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 5px 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.head-text-color {
+    border: none;
+    background-color: #27334F;
+    color: white;
+}
+
+.head-text:focus {
+    border: 2px solid #C9CDD9;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}
+
+.menu-drop-list {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-drop-list:hover .menu-list {
+    display: block;
+}
+
+.open-menu-list, .open-menu-card, .close-menu-list {
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+
+.open-menu-list {
+    background: url("SVG/Троеточие\ белое.svg") center no-repeat;
+    margin-top: 11px;
+}
+
+.menu-drop-card {
+    position: relative;
+    display: inline-block;
+    align-self: flex-end;
+    width: 32px;
+    height: 32px;
+}
+
+.menu-drop-card:hover .menu-card {
+    display: block;
+}
+
+.open-menu-card {
+    background: url("SVG/Троеточие\ серое.svg") center no-repeat;
+    margin-left: auto;
+}
+
+.open-menu-list:hover, .close-menu-list:hover {
+    border-radius: 3px;
+    background-color: #475269;
+}
+
+.open-menu-card:hover {
+    background-color: #EDF0F7;
+    border-radius: 3px;
+}
+
+.menu-list, .menu-card {
+    display: none;
+    position: absolute;
+    width: 75px;
+    margin-right: -40px;
+    z-index: 100;
+    right: 0;
+}
+
+.menu-card {
+    margin-top: -9px;
+}
+
+.menu-part {
+    width: 75px;
+    height: 40px;
+    background-color: white;
+    color: #2E3541;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #EBEFF4;
+    border-radius: 3px;
+}
+
+.menu-part:hover {
+    background-color: #27334F;
+    color: white;
+}
+
+.another-list, .card {
+    position: relative;
+    align-self: baseline;
+    width: 320px;
+    height: auto;
+}
+
+.add-another-list, .add-a-card {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 320px;
+    height: 55px;
+    background: #EDF0F7;
+    border-radius: 5px;
+}
+
+.add-another-list:hover, .add-a-card:hover {
+    background: #DEE3F0;
+}
+
+.plus-box {
+    width: 24px;
+    height: 24px;
+    background: #27334F;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.plus {
+    background: url("SVG/Плюс.svg") center no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.list-plus-text, .card-plus-text {
+    width: 118px;
+    height: 17px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #27334F;
+    margin-left: 10px;
+}
+
+.list-after-clicking, .card-after-clicking {
+    display: none;
+    width: 320px;
+    height: 155px;
+    background: white;
+    border: 1px solid #EBEFF4;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.list-text-area, .card-text-area {
+    width: 300px;
+    height: 80px;
+    background: white;
+    border: 2px solid #C9CDD9;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #A8B0C2;
+    margin: 9px;
+    padding: 10px;
+    resize: none;
+}
+
+.add-list, .add-card {
+    width: 96px;
+    height: 45px;
+    background: #27334F;
+    border-radius: 4px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin-left: 9px;
+    margin-top: -4px;
+}
+
+.close-list, .close-card, .cancel-description, .cancel-activity, .cancel-active-done {
+    width: 24px;
+    height: 24px;
+    background: url("SVG/Крестик.svg") center no-repeat;
+    border: none;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.close-list:hover, .close-card:hover, .cancel-description:hover, .cancel-activity:hover, .close-modal:hover, .cancel-active-done:hover {
+    border-radius: 3px;
+    background-color: #EDF0F7;
+}
+
+.all-cards {
+    height: auto;
+    box-sizing: border-box;
+}
+
+.card-done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    min-height: 165px;
+    background: white;
+    border: 1px solid #EBEFF4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    padding: 17px;
+}
+
+.selected {
+    opacity: 0.6;
+}
+
+.card-name {
+    position: relative;
+    width: 260px;
+    min-height: 48px;
+    height: auto;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #27334F;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9000;
+}
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 800px;
+    min-height: 748px;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #EBEFF4;
+    border-radius: 10px;
+    z-index: 9999;
+    padding: 50px;
+    pointer-events: auto;
+}
+
+.close-modal {
+    width: 24px;
+    height: 24px;
+    background: url("SVG/Крестик.svg") center no-repeat;
+    border: none;
+    align-self: flex-end;
+    margin-top: -30px;
+    margin-right: -30px;
+}
+
+.modal-text {
+    min-height: 45px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #27334F;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.modal-text:focus {
+    border: 2px solid #C9CDD9;
+}
+
+.actions {
+    width: 700px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.description-title, .activity-title, .actions-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #A8B0C2;
+    margin-bottom: 10px;
+}
+
+.archive-card {
+    width: 115px;
+    height: 40px;
+    background: #EDF0F7;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #27334F;
+}
+
+.archive-card:hover {
+    background: #DEE3F0;
+}
+
+.description {
+    width: 700px;
+    min-height: 160px;
+    margin-top: 50px;
+}
+
+.description-text-area, .activity-text-area {
+    width: 670px;
+    min-height: 75px;
+    background: white;
+    border: 1px solid #EBEFF4;
+    border-radius: 5px;
+    padding: 15px;
+    resize: none;
+}
+
+.activity-text-area {
+    margin-top: 25px;
+}
+
+.description-text-area::placeholder, .activity-text-area::placeholder {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A8B0C2;
+}
+
+.save-description, .save-activity, .save-active-done {
+    width: 78px;
+    height: 45px;
+    background: #27334F;
+    border-radius: 4px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.save-description, .cancel-description {
+    display: none;
+}
+
+.save-description:hover, .save-activity:hover, .save-active-done:hover {
+    background: #414B64;
+}
+
+.activity {
+    width: 700px;
+    min-height: 75px;
+    margin-top: 50px;
+}
+
+.all-actives {
+    width: 700px;
+    height: auto;
+}
+
+.active-done {
+    width: 700px;
+    height: auto;
+}
+
+.active-text {
+    width: 700px;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.active-text:focus {
+    border: 2px solid #C9CDD9;
+    border-radius: 3px;
+}
+
+.save-activity, .cancel-activity {
+    display: none;
+}
+
+.edit-activity, .delete-activity {
+    display: inline-block;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #A8B0C2;
+    background-color: white;
+    border: none;
+    padding: 0;
+}
+
+.sign {
+    display: inline-block;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A8B0C2;
+    margin: 0 2px;
+}
+
+.save-active-done, .cancel-active-done {
+    display: none;
+}
